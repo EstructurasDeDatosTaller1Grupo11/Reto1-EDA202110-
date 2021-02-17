@@ -11,7 +11,7 @@ import javax.lang.model.util.ElementScanner6;
  * @author Fernando De la Rosa
  *
  */
-public class ArregloDinamico<T extends Comparable<T>> implements ArregloDinamico<T> 
+public class ArregloDinamico<T extends Comparable<T>> implements IArregloDinamico<T> 
 {
 		/**
 		 * Capacidad maxima del arreglo
