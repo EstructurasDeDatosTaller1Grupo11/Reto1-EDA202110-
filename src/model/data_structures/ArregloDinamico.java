@@ -134,11 +134,14 @@ public class ArregloDinamico<T extends Comparable<T>>implements ILista<T>
 		elementos[(elementos.length-1)] = element;
 	}
 
+<<<<<<< HEAD
 	public void insertElement(T element, int pos) 
 	{
 		elementos[pos] = element;
 	}
 	
+=======
+>>>>>>> eabf58b3cce7b77a0a4eb51bdee05de48fcbcc20
 	public T removeFirst() 
 	{
 		T eliminado = elementos[0];
