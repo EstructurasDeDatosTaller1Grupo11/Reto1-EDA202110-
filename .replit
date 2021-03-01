@@ -1,2 +1,2 @@
 language = "java10"
-run = ""
+run = "java src/model/data_structures/ILista.java; java ILista"
