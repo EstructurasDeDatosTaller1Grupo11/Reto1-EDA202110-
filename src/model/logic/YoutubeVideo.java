@@ -1,22 +1,73 @@
 package model.logic;
 
+import java.util.Date;
+
 public class YoutubeVideo implements Comparable<YoutubeVideo>
 {
-	private int tendencia;
+	private String id;
 	
-	public int darTendencia()
+	private Date trending;
+	
+	private String title;
+	
+	private String channel;
+	
+	private int categoria;
+	
+	private Date published;
+	
+	private String tags;
+	
+	private Long views;
+	
+	private Long likes;
+	
+	private Long dislikes;
+	
+	private Long comments;
+	
+	private String link;
+	
+	private String comEnabled;
+	
+	private String ratEnabled;
+	
+	private String errorRemoved;
+	
+	private String description;
+	
+	private String pais;
+	
+	public YoutubeVideo(String pId, Date pTrending, String pTitle, String pChannel,int pCategoria, Date pPublished, String pTags, long pViews, long pLikes, long pDislikes, long pComments, String pLink, String pComEnabled, String pRatEnabled, String pErrorRemoved, String pDescription, String pPais)
 	{
-		return tendencia;
+		id = pId;
+		trending = pTrending;
+		title = pTitle;
+		channel = pChannel;
+		categoria = pCategoria;
+		published = pPublished;
+		tags = pTags;
+		views = pViews;
+		likes = pLikes;
+		dislikes = pDislikes;
+		comments = pComments;
+		link = pLink;
+		comEnabled = pComEnabled;
+		ratEnabled = pRatEnabled;
+		errorRemoved = pErrorRemoved;
+		description = pDescription;
+		pais = pPais;
 	}
-
-	public int compareTo(YoutubeVideo otro) 
+	
+	public Date darTrending()
 	{
-		if(this.darTendencia() < otro.darTendencia())
-			return -1;
-		if(this.darTendencia() == otro.darTendencia())
-		    return 0;
-		else
-			return 1;
+		return trending;
 	}
-
+	
+	public int compareTo(YoutubeVideo otro)
+	{
+		return trending.compareTo(otro.darTrending());
+	}
+	
+	
 }
