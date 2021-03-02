@@ -67,7 +67,5 @@ public class YoutubeVideo implements Comparable<YoutubeVideo>
 	public int compareTo(YoutubeVideo otro)
 	{
 		return trending.compareTo(otro.darTrending());
-	}
-	
-	
+	}	
 }

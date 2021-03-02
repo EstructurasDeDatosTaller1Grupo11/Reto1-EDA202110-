@@ -265,17 +265,17 @@ public class ListaEncadenada<T extends Comparable<T>> implements ILista<T>
 		}
 	}
 
-  public ILista sublista(int numElementos)
-  {
-    ArregloDinamico<T> sLista = new ArregloDinamico<T>(numElementos);
-    Nodo<T> actual = primero;
+	public ILista sublista(int numElementos)
+	{
+		ArregloDinamico<T> sLista = new ArregloDinamico<T>(numElementos);
+		Nodo<T> actual = primero;
 		int i = 1;
 		while(i<=size());
 		{
-			sLista.agregar(actual);
-      actual = actual.darSiguiente;
+			sLista.agregar(actual.darDatos());;
+			actual = actual.darSiguiente();
 		}
-    return sLista;
-  }
+		return sLista;
+	}
 }
 
