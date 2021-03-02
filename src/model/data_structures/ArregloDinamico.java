@@ -185,6 +185,16 @@ public class ArregloDinamico<T extends Comparable<T>> implements ILista<T> {
 	public void changeInfo(int pos, T elem) {
 		elementos[pos] = elem;
 	}
+
+  public ILista sublista(int numElementos)
+	{
+		ArregloDinamico<T> sLista = new ArregloDinamico<T>(numElementos);
+		for(int i = 0; i < numElementos; i++)
+		{
+			sLista.agregar(elementos[i]);
+		}
+		return sLista;
+	}
 	
 	public void cargar(String ruta) 
 	{
