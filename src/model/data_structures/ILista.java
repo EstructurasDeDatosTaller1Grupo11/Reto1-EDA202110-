@@ -88,4 +88,6 @@ public interface ILista <T extends Comparable<T>>
 	void changeInfo (int pos, T elem);
 	
   public ILista sublista(int numElementos);
+
+  void cargar(String ruta);
 }
