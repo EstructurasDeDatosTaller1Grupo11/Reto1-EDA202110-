@@ -1,2 +1,2 @@
 language = "java10"
-run = "java src/model/data_structures/ListaEncadenada.java; java ListaEncadenada"
+run = "java src/main/Main.java; java Main"

@@ -15,12 +15,12 @@ public interface ILista <T extends Comparable<T>>
 	void addLast(T element);
 	
 	/**
-	 * Agrega un elemento en la posición pos si la posición es una
-	 * posición válida. Los elementos que estén a partir de la
-     * posición dada deben correrse una posición a la derecha. Las
-     * posiciones válidas son posiciones donde ya hay un
-     * elemento en la lista. La posición del primer elemento es 1,
-     * la del segundo es 2 y así sucesivamente.
+	 * Agrega un elemento en la posiciï¿½n pos si la posiciï¿½n es una
+	 * posiciï¿½n vï¿½lida. Los elementos que estï¿½n a partir de la
+     * posiciï¿½n dada deben correrse una posiciï¿½n a la derecha. Las
+     * posiciones vï¿½lidas son posiciones donde ya hay un
+     * elemento en la lista. La posiciï¿½n del primer elemento es 1,
+     * la del segundo es 2 y asï¿½ sucesivamente.
 	 */
 	void insertElement(T element, int pos);
 	
@@ -31,13 +31,13 @@ public interface ILista <T extends Comparable<T>>
 	T removeFirst( );
 	
 	/**
-	 * Elimina el último elemento. Se retorna el elemento
+	 * Elimina el ï¿½ltimo elemento. Se retorna el elemento
      * eliminado.
 	 */
 	T removeLast( );
 	
 	/**
-	 * Elimina el elemento de una posición válida. Se retorna el
+	 * Elimina el elemento de una posiciï¿½n vï¿½lida. Se retorna el
      * elemento eliminado.
 	 */
 	T deleteElement( int pos);
@@ -48,19 +48,19 @@ public interface ILista <T extends Comparable<T>>
 	T firstElement( );
 	
 	/**
-	 * Retorna el último elemento
+	 * Retorna el ï¿½ltimo elemento
 	 */
 	T lastElement( );
 	
 	/**
-	 * Retorna el elemento en una posición válida. La posición del
-     * primer elemento es 1, la del segundo es 2 y así
+	 * Retorna el elemento en una posiciï¿½n vï¿½lida. La posiciï¿½n del
+     * primer elemento es 1, la del segundo es 2 y asï¿½
      * sucesivamente
 	 */
 	T getElement( int pos);
 	
 	/**
-	 * Retorna el número de datos en el arreglo
+	 * Retorna el nï¿½mero de datos en el arreglo
 	 */
 	int size( );
 	
@@ -71,20 +71,21 @@ public interface ILista <T extends Comparable<T>>
 	boolean isEmpty( );
 	
 	/**
-	 * Retorna la posición válida de un elemento. Si no se
+	 * Retorna la posiciï¿½n vï¿½lida de un elemento. Si no se
      * encuentra el elemento, el valor retornado es -1.
 	 */
 	int isPresent (T element);
 	
 	/**
-	 * Intercambia la información de los elementos en dos
-     * posiciones válidas.
+	 * Intercambia la informaciï¿½n de los elementos en dos
+     * posiciones vï¿½lidas.
 	 */
 	void exchange (int pos1, int pos2);
 	
 	/**
-	 * Actualiza el elemento en una posición válida.
+	 * Actualiza el elemento en una posiciï¿½n vï¿½lida.
 	 */
 	void changeInfo (int pos, T elem);
 	
+  public ILista sublista(int numElementos);
 }
