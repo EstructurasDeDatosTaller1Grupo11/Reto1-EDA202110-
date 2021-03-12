@@ -196,6 +196,7 @@ public class ArregloDinamico<T extends Comparable<T>> implements ILista<T> {
 		}
 		return sLista;
 	}
+<<<<<<< HEAD
 
 	public void cargar(String ruta) 
 	{
@@ -211,4 +212,6 @@ public class ArregloDinamico<T extends Comparable<T>> implements ILista<T> {
 			this.agregar(vid);
 		}
 	}
+=======
+>>>>>>> refs/remotes/origin/master
 }
