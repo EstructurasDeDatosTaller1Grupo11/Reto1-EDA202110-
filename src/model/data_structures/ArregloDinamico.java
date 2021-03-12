@@ -195,18 +195,4 @@ public class ArregloDinamico<T extends Comparable<T>> implements ILista<T> {
 		}
 		return sLista;
 	}
-	
-	public void cargar(String ruta) 
-	{
-		File f = new File(ruta);
-		FileReader fr = new FileReader(f);
-		BufferedReader br = new BufferedReader(fr);
-		String linea = br.readLine();
-		while (linea != null) {
-			String[] info = linea.split(",");
-			SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-			YoutubeVideo vid = new YoutubeVideo(info[0], formatter.parse(info[1]), info[2], info[3],Integer.parseInt(info[4]), formatter.parse(info[5]), info[6], Long.parseLong(info[7]), Long.parseLong(info[8]),Long.parseLong(info[9]), Long.parseLong(info[10]), info[11], info[12], info[13], info[14], info[15], info[16]);
-			this.agregar(vid);
-		}
-	}
 }

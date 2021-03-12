@@ -1,2 +1,2 @@
 language = "java10"
-run = "java src/main/Main.java; java Main"
+run = "java src/model/logic/Modelo.java; java Modelo"

@@ -286,7 +286,7 @@ public class ListaEncadenada<T extends Comparable<T>> implements ILista<T>
 	}
 
 
-	public void cargar(String ruta) 
+	public ListaEncadenada cargarVideos(String ruta) 
 	{
 		File f = new File(ruta);
 		FileReader fr = new FileReader(f);
@@ -306,7 +306,27 @@ public class ListaEncadenada<T extends Comparable<T>> implements ILista<T>
 				addLast(vid);
 			}
 		}
+  }
 		
+    public ListaEncadenada cargarCategoria(String ruta) 
+	  {
+		File f = new File(ruta);
+		FileReader fr = new FileReader(f);
+		BufferedReader br = new BufferedReader(fr);
+		String linea = br.readLine();
+		while (linea != null) 
+		{
+			String[] info = linea.split(" ");
+			Categoria cat = new Categoria(Integer.pardeint(info[0]), info[1]);
+			if(primero == null)
+			{
+				primero = cat;
+			}
+			else
+			{
+				addLast(cat);
+			}
+		}
 	}
 }
 

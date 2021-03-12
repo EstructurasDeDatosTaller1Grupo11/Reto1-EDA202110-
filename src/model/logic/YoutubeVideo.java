@@ -18,13 +18,13 @@ public class YoutubeVideo implements Comparable<YoutubeVideo>
 	
 	private String tags;
 	
-	private Long views;
+	private long views;
 	
-	private Long likes;
+	private long likes;
 	
-	private Long dislikes;
+	private long dislikes;
 	
-	private Long comments;
+	private long comments;
 	
 	private String link;
 	
@@ -68,4 +68,84 @@ public class YoutubeVideo implements Comparable<YoutubeVideo>
 	{
 		return trending.compareTo(otro.darTrending());
 	}	
+
+  public String darId()
+  {
+    return id;
+  }
+
+  public String darTitle()
+  {
+    return title;
+  }
+
+  public String darChannel()
+  {
+    return channel;
+  }
+
+  public int darCategoria()
+  {
+    return categoria;
+  }
+
+  public Date darPublished()
+  {
+    return published;
+  }
+
+  public String datTags()
+  {
+    return tags;
+  }
+
+  public long darViews()
+  {
+    return views;
+  }
+
+  public long darLikes()
+  {
+    return likes;
+  }
+
+  public long darDislikes()
+  {
+    return dislikes;
+  }
+
+  public long darComments()
+  {
+    return comments;
+  }
+
+  public String darLink()
+  {
+    return link;
+  }
+
+  public String darComEnabled()
+  {
+    return comEnabled;
+  }
+
+  public String darRatEnabled()
+  {
+    return ratEnabled;
+  }
+
+  public String darErrorRemoved()
+  {
+    return errorRemoved;
+  }
+
+  public String darDescription()
+  {
+    return description;
+  }
+
+  public String darPais()
+  {
+    return pais;
+  }
 }
