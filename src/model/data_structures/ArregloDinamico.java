@@ -47,8 +47,10 @@ public class ArregloDinamico<T extends Comparable<T>> implements ILista<T> {
 		tamanoAct = 0;
 	}
 
-	public void agregar(T dato) {
-		if (tamanoAct == tamanoMax) { // caso de arreglo lleno (aumentar tamaNo)
+	public void agregar(T dato) 
+	{
+		if (tamanoAct == tamanoMax) 
+		{ // caso de arreglo lleno (aumentar tamaNo)
 			tamanoMax = 2 * tamanoMax;
 			T[] copia = elementos;
 			elementos = (T[]) new Object[tamanoMax];
@@ -61,28 +63,35 @@ public class ArregloDinamico<T extends Comparable<T>> implements ILista<T> {
 		tamanoAct++;
 	}
 
-	public int darCapacidad() {
+	public int darCapacidad() 
+	{
 		return tamanoMax;
 	}
 
-	public int darTamano() {
+	public int darTamano() 
+	{
 		return tamanoAct;
 	}
 
-	public T darElemento(int i) {
+	public T darElemento(int i) 
+	{
 		return elementos[i];
 	}
 
-	public T[] darElementos() {
+	public T[] darElementos() 
+	{
 		return elementos;
 	}
 
-	public T buscar(T dato) {
+	public T buscar(T dato) 
+	{
 		T solucion = null;
 		int i = 0;
 		boolean encontro = false;
-		while (i < tamanoAct && !encontro) {
-			if (elementos[i].compareTo(dato) == 0) {
+		while (i < tamanoAct && !encontro) 
+		{
+			if (elementos[i].compareTo(dato) == 0) 
+			{
 				encontro = true;
 				solucion = elementos[i];
 			}
@@ -91,13 +100,20 @@ public class ArregloDinamico<T extends Comparable<T>> implements ILista<T> {
 		return solucion;
 	}
 
-	public void eliminar(T dato) {
-		for (int i = 0; i < tamanoAct; i++) {
-			if (elementos[i].compareTo(dato) == 0) {
-				if (i == tamanoAct) {
+	public void eliminar(T dato) 
+	{
+		for (int i = 0; i < tamanoAct; i++) 
+		{
+			if (elementos[i].compareTo(dato) == 0) 
+			{
+				if (i == tamanoAct) 
+				{
 					tamanoAct--;
-				} else {
-					for (int j = i + 1; j < tamanoAct; j++) {
+				}
+				else 
+				{
+					for (int j = i + 1; j < tamanoAct; j++) 
+					{
 						elementos[i] = elementos[j];
 					}
 					tamanoAct--;
@@ -106,70 +122,86 @@ public class ArregloDinamico<T extends Comparable<T>> implements ILista<T> {
 		}
 	}
 
-	public void invertir() {
+	public void invertir() 
+	{
 		T temporal[] = (T[]) new Object[tamanoMax];
 		int j = 0;
-		for (int i = tamanoAct; i >= 0; i--) {
+		for (int i = tamanoAct; i >= 0; i--) 
+		{
 			temporal[j] = elementos[i];
 			j++;
 		}
 		elementos = temporal;
 	}
 
-	public void addFirst(T element) {
+	public void addFirst(T element) 
+	{
 		elementos[0] = element;
 	}
 
-	public void addLast(T element) {
+	public void addLast(T element) 
+	{
 		elementos[(elementos.length - 1)] = element;
 	}
 
-	public void insertElement(T element, int pos) {
+	public void insertElement(T element, int pos) 
+	{
 		elementos[pos] = element;
 	}
 
-	public T removeFirst() {
+	public T removeFirst() 
+	{
 		T eliminado = elementos[0];
 		elementos[0] = null;
 		return eliminado;
 	}
 
-	public T removeLast() {
+	public T removeLast() 
+	{
 		T eliminado = elementos[(elementos.length - 1)];
 		elementos[(elementos.length - 1)] = null;
 		return eliminado;
 	}
 
-	public T deleteElement(int pos) {
+	public T deleteElement(int pos)
+	{
 		T eliminado = elementos[pos];
 		elementos[pos] = null;
 		return eliminado;
 	}
 
-	public T firstElement() {
+	public T firstElement() 
+	{
 		return elementos[0];
 	}
 
-	public T lastElement() {
+	public T lastElement() 
+	{
 		return elementos[(elementos.length - 1)];
 	}
 
-	public T getElement(int pos) {
+	public T getElement(int pos) 
+	{
 		return elementos[pos];
 	}
 
-	public int size() {
+	public int size() 
+	{
 		return elementos.length;
 	}
 
-	public boolean isEmpty() {
+	public boolean isEmpty() 
+	{
 		return elementos.length == 0 ? true : false;
 	}
 
-	public int isPresent(T element) {
+	public int isPresent(T element) 
+	{
 		int i = 0;
-		while (i < size()) {
-			if (elementos[i] == element) {
+		while (i < size())
+		{
+			if (elementos[i] == element) 
+			{
 				return i;
 			} else
 				i++;
@@ -177,13 +209,15 @@ public class ArregloDinamico<T extends Comparable<T>> implements ILista<T> {
 		return -1;
 	}
 
-	public void exchange(int pos1, int pos2) {
+	public void exchange(int pos1, int pos2) 
+	{
 		T temp = elementos[pos1];
 		elementos[pos1] = elementos[pos2];
 		elementos[pos2] = temp;
 	}
 
-	public void changeInfo(int pos, T elem) {
+	public void changeInfo(int pos, T elem)
+	{
 		elementos[pos] = elem;
 	}
 
@@ -196,22 +230,4 @@ public class ArregloDinamico<T extends Comparable<T>> implements ILista<T> {
 		}
 		return sLista;
 	}
-<<<<<<< HEAD
-
-	public void cargar(String ruta) 
-	{
-		File f = new File(ruta);
-		FileReader fr = new FileReader(f);
-		BufferedReader br = new BufferedReader(fr);
-		String linea = br.readLine();
-		while (linea != null)
-		{
-			String[] info = linea.split(",");
-			SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-			YoutubeVideo vid = new YoutubeVideo(info[0], formatter.parse(info[1]), info[2], info[3],Integer.parseInt(info[4]), formatter.parse(info[5]), info[6], Long.parseLong(info[7]), Long.parseLong(info[8]),Long.parseLong(info[9]), Long.parseLong(info[10]), info[11], info[12], info[13], info[14], info[15], info[16]);
-			this.agregar(vid);
-		}
-	}
-=======
->>>>>>> refs/remotes/origin/master
 }

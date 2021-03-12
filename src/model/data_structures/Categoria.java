@@ -1,20 +1,31 @@
 package model.data_structures;
 
-public class Categoria {
-  private int id;
+import model.logic.YoutubeVideo;
 
-  private String cat;
+public class Categoria implements Comparable<Categoria>
+{
+	private int id;
 
-  public Categoria(int pId, String pCategoria) {
-    id = pId;
-    cat = pCategoria;
-  }
+	private String cat;
 
-  public int darId() {
-    return id;
-  }
+	public Categoria(int pId, String pCategoria) 
+	{
+		id = pId;
+		cat = pCategoria;
+	}
 
-  public String darCategoria() {
-    return cat;
-  }
+	public int darId() 
+	{
+		return id;
+	}
+
+	public String darCategoria() 
+	{
+		return cat;
+	}
+
+	public int compareTo(Categoria o) 
+	{
+		return this.darCategoria().compareTo(o.darCategoria());
+	}
 }
