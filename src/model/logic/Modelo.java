@@ -98,7 +98,16 @@ public class Modelo
 
 	public void ordenarPorTendencia() 
 	{
-
+    for(int i = 0; i < tamanioMaxVideos - 1; i++)
+    {
+      for(int j = 0; j < tamanioMaxVideos - i - 1; j++)
+      {
+        if(videos.darElemento(j) < videos.darElemento(1 + j))
+        {
+          videos.exchange(j, 1 + j);
+        }
+      }
+    }
 	}
 	
 	public void darTrendingPorPais(String pPais)
